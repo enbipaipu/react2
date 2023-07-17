@@ -6,10 +6,14 @@ const Home = () => {
   const countRef = useRef(0);
   return (
     <div className={styles.container}>
-      <div>カウント（useState）:{count}</div>
-      <button onClick={() => setCount(count + 1)}>カウントアップ</button>
-      <div>カウント（useRef）:{countRef.current}</div>
-      <button onClick={() => countRef.current++}>カウントアップ</button>
+      <div className={styles.state}>
+        <div>カウント（useState）:{count}</div>
+        <button onClick={() => setCount(count + 1)}>カウントアップ</button>
+      </div>
+      <div className={styles.ref}>
+        <div>カウント（useRef）:{countRef.current}</div>
+        <button onClick={() => countRef.current++}>カウントアップ</button>
+      </div>
     </div>
   );
 };
